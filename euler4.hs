@@ -1,15 +1,12 @@
 ﻿---------------------------------------------
 -- Max Suica, 02-10-2010. max.suica@gmail.com
 
-import Data.List (sort)
 
 palindrome a = 
-  show a == (reverse $ show a)
+  show a == (reverse.show $ a)
 
 palindromes min max =  
-  [a*b | a <- ns, b <- ns, a <= b, palindrome (a*b)]
- where
-  ns = [min..max]
+  [a*b | a <- [min..max], b <- [1..a], palindrome (a*b)]
 
-euler4 = last $ sort (palindromes 100 999)
+euler4 = maximum $ palindromes 100 999
 

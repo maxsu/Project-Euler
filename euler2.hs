@@ -2,8 +2,6 @@
 -- Max Suica, 0-10-2010. max.suica@gmail.com
 
 
-nsum n k = k * a * (a + 1) `div` 2 
-  where a = div n k
+evenFib = 2 : 8: zipWith (\a b -> a + 4*b) evenFib (tail evenFib)
 
-euler1 = f 3 + f 5 - f 15
-  where f = nsum 1000
+euler2 = sum . takeWhile (< 4000000) $ evenFib
