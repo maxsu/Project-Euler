@@ -4,7 +4,7 @@ module Euler where
 intsqrt = floor.sqrt.fromIntegral
 
 -- ^ Tests whethere a number is a perfect square.
-square x = x == (intsqrt x)^2
+square x = x == intsqrt x ^ 2
 
 -- ^ List of primes by trial division
 primes = 2:[p | p <- [3,5..], prime p]

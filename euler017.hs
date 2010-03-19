@@ -7,10 +7,10 @@ tens   = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "
 
 number n 
     | n > 999        = "one thousand"
-    | mod n 100 == 0 = digits !! (div n 100) ++ " hundred"
+    | mod n 100 == 0 = digits !! div n 100 ++ " hundred"
     | n > 99         = number (div n 100 * 100) ++ " and " ++ number (mod n 100) 
-    | mod n 10 == 0  = tens   !! (div n 10)
-    | n > 20         = tens   !! (div n 10) ++ " " ++ digits !! (mod n 10)
+    | mod n 10 == 0  = tens   !! div n 10
+    | n > 20         = tens   !! div n 10 ++ " " ++ digits !! mod n 10
     | n > 10         = teens  !! (n - 11)
     | n < 10         = digits !! n
 

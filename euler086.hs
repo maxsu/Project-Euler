@@ -17,7 +17,7 @@ intsqrt:: Int -> Int
 intsqrt x = floor.sqrt.fromIntegral $ x
 
 lt:: Integral a => a -> Float -> Bool
-lt a b = (fromIntegral a) < b 
+lt a b = fromIntegral a < b 
 
 pythagorean n = [(a,b) | b <- [1..n], a <- [1..b], square (a^2 + b^2)]
 primitives n =    [(a,b) | b <- [1..n], a <- [1..b], gcd a b == 1, square (a^2 + b^2)]
@@ -53,7 +53,7 @@ rooms2 n =
     [(x,y,k) | (j,k) <- pythagorean n, x <- [1..j-1], y <- [1..k], x <= y, x + y == j, y <= k   ] 
 	where a = [1..n]
 
-test n = foldl (\ x (a,b) -> x + 1 + (div a 2) - (min 1 (a - b))) 0 (pythagorean n)
+test n = foldl (\ x (a,b) -> x + 1 + div a 2 - min 1 (a - b)) 0 (pythagorean n)
 
 path (x,y,z) = (x + y)^2 + z^2
 

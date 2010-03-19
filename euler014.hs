@@ -5,14 +5,14 @@
 
 import qualified Data.MemoCombinators as Memo
 
-collatz n = iterate (\ x -> if even x then div x 2 else 3*x+1) n
+collatz = iterate (\ x -> if even x then div x 2 else 3*x+1)
 
 
 collatzcount n = 1 + length (takeWhile (/=1) $ collatz n)
 
 collatzcount2 = Memo.integral collatzcount'
  where
-   collatzcount' n = count' 0 n
+   collatzcount' = count' 0
    count' c 1 = 0
    count'  c n = 1 + collatzcount' ((\ x -> if even x then div x 2 else 3*x+1) n)
 
