@@ -4,3 +4,7 @@
 import Euler (primes)
 
 euler7 = primes !! 10000
+
+
+main :: IO ()
+main = putStr $ show euler7

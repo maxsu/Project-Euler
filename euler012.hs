@@ -5,11 +5,15 @@
 
 import Data.List (find)
 import Data.Maybe (fromJust)
-import Euler (factorcount)
+import Euler (factorCount)
 
    
-divisors n = product.map ((+1).snd) $ factorcount n
+divisors n = product . map ((+1).snd) $ factorCount n
 
 triangleNums = scanl1 (+) [1..]
 
-euler12 = snd.fromJust.find ((> 500).snd) $ map (\n-> (n, divisors n)) triangleNums
+euler12 = fromJust.find ((> 500).divisors) triangleNums
+
+
+main :: IO ()
+main = putStr $ show euler12

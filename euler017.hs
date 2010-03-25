@@ -1,6 +1,7 @@
 ---------------------------------------------
 -- Max Suica, 03-17-2010. max.suica@gmail.com
 
+
 digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 teens  = ["eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
 tens   = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
@@ -15,6 +16,9 @@ number n
     | n < 10         = digits !! n
 
 
-
 euler17 = length . concatMap (filter (/=' ') . number) $ [1..1000]
+
+
+main :: IO ()
+main = putStr $ show euler17
  

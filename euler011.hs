@@ -31,6 +31,10 @@ diagonal xs = transpose $ zipWith (++) (inits [0,0..]) xs
 rightdiag = diagonal rows
 leftdiag  = diagonal columns
 
-total = intercalate [0] $ concat [rows, columns, leftdiag, rightdiag]
+total = (++[0]) . intercalate [0] $ concat [rows, columns, leftdiag, rightdiag]
 
 euler11 = maximum . map (product . take 4) $ tails total
+
+
+main :: IO ()
+main = putStr $ show euler11

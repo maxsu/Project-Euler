@@ -22,3 +22,7 @@ maximum' a = max' a 0
   max' []  n = n
 
 euler14 = maximum' . map collatzcount $ [1..1000000]
+
+
+main :: IO ()
+main = putStr $ show euler14

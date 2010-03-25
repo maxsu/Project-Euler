@@ -10,3 +10,6 @@ palindromes min max =
 
 euler4 = maximum $ palindromes 100 999
 
+
+main :: IO ()
+main = putStr $ show euler4

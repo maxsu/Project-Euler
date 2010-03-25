@@ -4,3 +4,7 @@
 import Euler (primes)
 
 euler10 = sum.takeWhile (<=2000000) $ primes
+
+
+main :: IO ()
+main = putStr $ show euler10

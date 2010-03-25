@@ -28,7 +28,7 @@ pythagorean = [[m^2-n^2, 2*m*n, m^2+n^2]| m <- [2..], n <- [1..m-1],
 
 
 -- These need work     
-factorcount n = fc fs [(f,1)]
+factorCount n = fc fs [(f,1)]
  where 
    (f:fs) = factor n
    fc [] ps = reverse ps

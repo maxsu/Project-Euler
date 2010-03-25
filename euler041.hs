@@ -11,3 +11,7 @@ pandigital = map (read::String->Int)
   $ concatMap permutations $ tail . inits $ digits
 
 euler41 = fromJust . find prime . reverse . sort $ pandigital
+
+
+main :: IO ()
+main = putStr $ show euler41
