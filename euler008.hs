@@ -29,7 +29,7 @@ numString = map digitToInt
 
 maxProd n = maximum . map (product . take n) . tails . (++ [0])
 
-euler8 = maxProd 5 numString
+euler8 = maxProd 5 numstring
 
 
 main :: IO ()
