@@ -6,7 +6,7 @@ import List (find)
 import Maybe (fromJust)
 import Euler (pythagorean)
 
-triple = fromJust.find (\x -> sum x `mod` 1000 == 0) $ pythagorean
+triple = fromJust.find (\x -> 1000 `mod` sum x == 0) $ pythagorean
 scale = div 1000 (sum triple)
 
 euler9 = product . map (*scale) $ triple
