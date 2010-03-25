@@ -28,7 +28,10 @@ pythagorean = [[m^2-n^2, 2*m*n, m^2+n^2]| m <- [2..], n <- [1..m-1],
 
 
 -- These need work     
-factorCount n = fc fs [(f,1)]
+factorCount n 
+  | n == 0 = []
+  | n == 1 = []
+  | otherwise = fc fs [(f,1)]
  where 
    (f:fs) = factor n
    fc [] ps = reverse ps
@@ -37,4 +40,4 @@ factorCount n = fc fs [(f,1)]
      | otherwise = fc facs ((fac, 1): (f1, n): pairs)
 
      
-divisors n = product.map ((+1).snd) $ factorcount n
+divisors n = product.map ((+1).snd) $ factorCount n
