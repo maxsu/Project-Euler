@@ -109,4 +109,4 @@ euler13 = take 10 . show . sum $ numbers
 
 
 main :: IO ()
-main = putStr $ show euler13
+main = putStr $ euler13
