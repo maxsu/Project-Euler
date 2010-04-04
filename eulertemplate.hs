@@ -4,5 +4,5 @@
 
 
 main :: IO ()
-main = putStr $ show euler
+main = print euler
 
