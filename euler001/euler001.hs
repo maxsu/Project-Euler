@@ -10,4 +10,4 @@ euler1 = f 3 + f 5 - f 15
 
 
 main :: IO ()
-main = putStr $ show euler1
+main = print euler1

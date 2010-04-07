@@ -103,7 +103,7 @@ nums =
 
 reduce x = zipWith max x (tail x)
 
-euler67 = foldl1 (\a b -> zipWith (+) b (reduce a)) (reverse nums)
+euler67 = head $ foldl1 (\a b -> zipWith (+) b (reduce a)) (reverse nums)
  
 main :: IO ()
-main = putStr $ show euler67
+main = print euler67

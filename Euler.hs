@@ -1,15 +1,18 @@
 module Euler where
 
 -- ^ Integer square root function (not accurate above 10^20).
+intsqrt :: (Integral a, Integral b) => a -> b
 intsqrt = floor.sqrt.fromIntegral
 
 -- ^ Tests whethere a number is a perfect square.
 square x = x == intsqrt x ^ 2
 
 -- ^ List of primes by trial division
+primes :: Integral a => [a]
 primes = 2:[p | p <- [3,5..], prime p]
 
 -- ^ Basic primality testing by trial division
+prime :: Integral a => a -> Bool
 prime a = all (notDiv a) $ takeWhile (<= (intsqrt a))  primes
  where 
    notDiv n p = n `mod` p /= 0

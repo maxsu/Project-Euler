@@ -21,8 +21,8 @@ nums =
 
 reduce x = zipWith max x (tail x)
 
-euler18 = foldl1 (\a b -> zipWith (+) b (reduce a)) (reverse nums)
+euler18 = head $ foldl1 (\a b -> zipWith (+) b (reduce a)) (reverse nums)
  
 main :: IO ()
-main = putStr $ show euler18
+main = print euler18
 

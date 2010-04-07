@@ -1,8 +1,8 @@
 ﻿---------------------------------------------
 -- Max Suica, 03-16-2010. max.suica@gmail.com
 
-import  Data.Maybe (fromMaybe)
-import  Data.List (permutations, find, sort)
+import  Data.Maybe (fromJust)
+import  Data.List (permutations, find, sort, inits)
 import  Euler (intsqrt, prime)
 
 digits = "123456789"
@@ -10,8 +10,7 @@ digits = "123456789"
 pandigital = map (read::String->Int) 
   $ concatMap permutations $ tail . inits $ digits
 
-euler41 = fromJust . find prime . reverse . sort $ pandigital
-
+euler41 = fromJust . find prime . reverse . sort $ pandigital 
 
 main :: IO ()
 main = putStr $ show euler41
