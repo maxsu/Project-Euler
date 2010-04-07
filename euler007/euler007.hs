@@ -7,4 +7,4 @@ euler7 = primes !! 10000
 
 
 main :: IO ()
-main = putStr $ show euler7
+main = print euler7

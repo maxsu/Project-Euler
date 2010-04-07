@@ -8,4 +8,4 @@ euler3 = last.factor $ 600851475143
 
 
 main :: IO ()
-main = putStr $ show euler3
+main = print euler3

@@ -6,5 +6,5 @@ import Data.Char (digitToInt)
 euler16 = sum . map digitToInt $ show (2^1000)
 
 main :: IO ()
-main = putStr $ show euler16
+main = print euler16
 

@@ -9,4 +9,4 @@ euler6 = (sum1 100)^2 - sum2 100
 
 
 main :: IO ()
-main = putStr $ show euler6
+main = print euler6

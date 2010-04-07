@@ -8,4 +8,4 @@ euler2 = sum . takeWhile (< 4000000) $ evenFib
 
 
 main :: IO ()
-main = putStr $ show euler2
+main = print euler2

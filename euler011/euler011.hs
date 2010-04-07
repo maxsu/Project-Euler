@@ -37,4 +37,4 @@ euler11 = maximum . map (product . take 4) $ tails total
 
 
 main :: IO ()
-main = putStr $ show euler11
+main = print euler11

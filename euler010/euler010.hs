@@ -7,4 +7,4 @@ euler10 = sum.takeWhile (<=2000000) $ (primes::[Int])
 
 
 main :: IO ()
-main = putStr $ show euler10
+main = print euler10

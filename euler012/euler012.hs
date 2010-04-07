@@ -23,4 +23,4 @@ euler12 = triangleNums !! index
 
 
 main :: IO ()
-main = putStr $ show euler12
+main = print euler12

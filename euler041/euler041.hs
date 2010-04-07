@@ -13,4 +13,4 @@ pandigital = map (read::String->Int)
 euler41 = fromJust . find prime . reverse . sort $ pandigital 
 
 main :: IO ()
-main = putStr $ show euler41
+main = print euler41

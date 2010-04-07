@@ -6,4 +6,4 @@ euler5 = foldl lcm 1 [1..20]
 
 
 main :: IO ()
-main = putStr $ show euler5
+main = print euler5

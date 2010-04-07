@@ -20,5 +20,5 @@ euler17 = length . concatMap (filter (/=' ') . number) $ [1..1000]
 
 
 main :: IO ()
-main = putStr $ show euler17
+main = print euler17
  

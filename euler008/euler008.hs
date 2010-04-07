@@ -33,4 +33,4 @@ euler8 = maxProd 5 numString
 
 
 main :: IO ()
-main = putStr $ show euler8
+main = print euler8

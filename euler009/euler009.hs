@@ -13,4 +13,4 @@ euler9 = product . map (*scale) $ triple
 
 
 main :: IO ()
-main = putStr $ show euler9
+main = print euler9

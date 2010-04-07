@@ -9,5 +9,5 @@ fibCount = map (length.show) fib
 euler25 = succ.length.takeWhile (< 1000) $ fibCount
 
 main :: IO ()
-main = putStr $ show euler25
+main = print euler25
 
