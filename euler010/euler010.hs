@@ -3,7 +3,7 @@
 
 import Euler (primes)
 
-euler10 = sum.takeWhile (<=2000000) $ (primes::[Int])
+euler10 = sum.takeWhile (<=2000000) $ (primes::[Integer])
 
 
 main :: IO ()
