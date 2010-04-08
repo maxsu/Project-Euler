@@ -1,0 +1,5 @@
+# Ignore haskell build files, executables, and the bin directory.
+*.hi
+*.o
+*.exe
+./bin
